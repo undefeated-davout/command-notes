@@ -22,7 +22,7 @@ docker ps -aq | xargs docker rm -f && docker images -aq | xargs docker rmi -f
 # remove suspended containers, images, caches
 docker ps -aq | xargs docker rm -f && docker images -aq | xargs docker rmi -f && docker system prune --volumes -f
 # remove suspended containers, images, caches, volumes
-ocker ps -aq | xargs docker rm -f && docker images -aq | xargs docker rmi -f && docker system prune --volumes -f && docker volume ls -q | xargs docker volume rm
+docker ps -aq | xargs docker rm -f && docker images -aq | xargs docker rmi -f && docker system prune --volumes -f && docker volume ls -q | xargs docker volume rm
 ```
 
 ## RUN
