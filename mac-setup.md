@@ -189,3 +189,27 @@ brew install ricty
 cp -f /usr/local/Cellar/ricty/4.1.1/share/fonts/Ricty*.ttf ~/Library/Fonts/
 fc-cache -vf
 ```
+
+### よく使うbrew tools
+
+```bash
+# brew list -1
+
+ansible
+asciiquarium
+bat
+colordiff
+exa
+fzf
+git
+gotop
+htop
+jq
+pyenv
+skhd
+sl
+tmux
+tree
+yabai
+z
+```
