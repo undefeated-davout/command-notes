@@ -28,21 +28,21 @@ docker ps -aq | xargs docker rm -f && docker images -aq | xargs docker rmi -f &&
 ## RUN
 
 ```bash
-# CentOS起動
-docker run --rm -it centos:8 /bin/bash
+# Ubuntu
+docker run --rm -it ubuntu:20.04 /bin/bash
 
-# Python docker起動
+# Python
 docker run --rm -it python:3.9.6 /bin/bash
-# Python docker起動（ボリューム共有）
+# Python（ボリューム共有）
 docker run --rm -v "$(PWD)":/opt/app/src -w /opt/app/src -it python:3.10.2-bullseye /bin/bash --login
 
-# Go docker起動（ボリューム共有）
+# Go（ボリューム共有）
 docker run --rm -v "$(PWD)":/go/src -w /go/src -it golang:1.17.6-bullseye /bin/bash
 
-# JupyterNotebook起動
+# JupyterNotebook
 docker run --rm -v "$(PWD)":/home/jovyan/work -w /home/jovyan/work -p 8888:8888 jupyter/scipy-notebook
 
-# Node docker起動
+# Node
 docker run --rm -v "$(PWD)":/opt/app/src -w /opt/app/src -it node:16.13.2-bullseye /bin/bash --login
 ```
 
