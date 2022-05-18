@@ -99,7 +99,7 @@ echo 'shell_session_update' > $HOME/.bash_logout
 ### デフォルトシェルをbashに変更
 
 ```bash
-chsh -s /bin/bash
+chsh -s /usr/local/bin/bash
 ```
 
 ### Finderで隠しファイルを表示する設定
