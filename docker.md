@@ -13,6 +13,10 @@ docker exec -it -w /share/fuootus node-docker.app /bin/bash --login
 ## REMOVE
 
 ```bash
+# 未使用オブジェクト削除
+docker system prune
+# 未使用オブジェクト削除（ボリューム含む）
+docker system prune --volumes -f
 # 稼働中のコンテナを停止
 docker ps -q | xargs docker stop
 # 停止したコンテナを削除
@@ -34,16 +38,16 @@ docker run --rm -it ubuntu:20.04 /bin/bash
 # Python
 docker run --rm -it python:3.9.6 /bin/bash
 # Python（ボリューム共有）
-docker run --rm -v "$(PWD)":/opt/app/src -w /opt/app/src -it python:3.10.2-bullseye /bin/bash --login
+docker run --rm -v "$(pwd)":/opt/app/src -w /opt/app/src -it python:3.10.2-bullseye /bin/bash --login
 
 # Go（ボリューム共有）
-docker run --rm -v "$(PWD)":/go/src -w /go/src -it golang:1.17.6-bullseye /bin/bash
+docker run --rm -v "$(pwd)":/go/src -w /go/src -it golang:1.17.6-bullseye /bin/bash
 
 # JupyterNotebook
-docker run --rm -v "$(PWD)":/home/jovyan/work -w /home/jovyan/work -p 8888:8888 jupyter/scipy-notebook
+docker run --rm -v "$(pwd)":/home/jovyan/work -w /home/jovyan/work -p 8888:8888 jupyter/scipy-notebook
 
 # Node
-docker run --rm -v "$(PWD)":/opt/app/src -w /opt/app/src -it node:16.13.2-bullseye /bin/bash --login
+docker run --rm -v "$(pwd)":/opt/app/src -w /opt/app/src -it node:16.13.2-bullseye /bin/bash --login
 ```
 
 ## LOG
