@@ -4,10 +4,10 @@
 
 ```bash
 # コンテナにログイン
-docker exec -it node-docker.app /bin/bash --login
+docker exec -it node-docker.app bash --login
 
 # コンテナにログインし、指定のディレクトリで開く
-docker exec -it -w /share/fuootus node-docker.app /bin/bash --login
+docker exec -it -w /share/fuootus node-docker.app bash --login
 ```
 
 ## REMOVE
