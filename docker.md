@@ -33,21 +33,21 @@ docker ps -aq | xargs docker rm -f && docker images -aq | xargs docker rmi -f &&
 
 ```bash
 # Ubuntu
-docker run --rm -it ubuntu:20.04 /bin/bash
+docker run --rm -it ubuntu:20.04 bash
 
 # Python
-docker run --rm -it python:3.9.6 /bin/bash
+docker run --rm -it python:3.9.6 bash
 # Python（ボリューム共有）
-docker run --rm -v "$(pwd)":/opt/app/src -w /opt/app/src -it python:3.10.2-bullseye /bin/bash --login
+docker run --rm -v "$(pwd)":/opt/app/src -w /opt/app/src -it python:3.10.2-bullseye bash --login
 
 # Go（ボリューム共有）
-docker run --rm -v "$(pwd)":/go/src -w /go/src -it golang:1.17.6-bullseye /bin/bash
+docker run --rm -v "$(pwd)":/go/src -w /go/src -it golang:1.17.6-bullseye bash
 
 # JupyterNotebook
 docker run --rm -v "$(pwd)":/home/jovyan/work -w /home/jovyan/work -p 8888:8888 jupyter/scipy-notebook
 
 # Node
-docker run --rm -v "$(pwd)":/opt/app/src -w /opt/app/src -it node:16.13.2-bullseye /bin/bash --login
+docker run --rm -v "$(pwd)":/opt/app/src -w /opt/app/src -it node:16.13.2-bullseye bash --login
 ```
 
 ## LOG
