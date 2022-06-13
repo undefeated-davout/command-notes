@@ -32,6 +32,9 @@ docker ps -aq | xargs docker rm -f && docker images -aq | xargs docker rmi -f &&
 ## RUN
 
 ```bash
+# Nginx
+docker run --rm -p 80:80 nginx
+
 # Ubuntu
 docker run --rm -it ubuntu:20.04 bash
 
