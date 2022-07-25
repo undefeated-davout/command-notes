@@ -60,5 +60,5 @@ docker run --rm -v "$(pwd)":/opt/app/src -w /opt/app/src -it node:16.13.2-bullse
 docker logs $(docker ps -ql) -f
 
 # docker-composeログを表示する（日本語非対応）
-docker-compose logs -f
+docker compose logs -f
 ```
